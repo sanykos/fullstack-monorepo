@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 1. Проверка типов во всем проекте (Turbo сделает это быстро)
+npm run type-check
+
+# 2. Запуск линтинга только для измененных файлов
+npx lint-staged
